@@ -5,5 +5,45 @@
 }
 
 body {
-    background-color: aquamarine;
+    background-color: rgb(190, 245, 227);
+}
+
+header {
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+}
+
+h1 {
+    padding-left: 30px;
+}
+
+li {
+    padding: 0 60px;
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+img {
+    height: 100px;
+    width: auto;
 }
