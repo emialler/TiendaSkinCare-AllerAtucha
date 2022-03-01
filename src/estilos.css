@@ -30,7 +30,7 @@ nav ul {
 
 h1 {
     padding-left: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 li {
@@ -56,4 +56,16 @@ img {
 #greeting {
     text-align: center;
     padding-top: 30px;
+}
+
+#itemCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#itemCount p {
+    padding: 0 20px;
+    margin-bottom: 0;
 }
