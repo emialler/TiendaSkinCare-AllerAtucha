@@ -30,6 +30,7 @@ nav ul {
 
 h1 {
     padding-left: 30px;
+    font-size: 2rem;
 }
 
 li {
@@ -46,4 +47,13 @@ li a {
 img {
     height: 100px;
     width: auto;
+}
+
+.material-icons {
+    font-size: 2rem;
+}
+
+#greeting {
+    text-align: center;
+    padding-top: 30px;
 }

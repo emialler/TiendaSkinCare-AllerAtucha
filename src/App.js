@@ -1,7 +1,13 @@
 import NavBar from './components/NavBar.js'
+import ItemListContainer from "./components/ItemListContainer"
 
 const App = () => {
-    return <NavBar />
+    return (
+        <>
+            <NavBar/>
+            <ItemListContainer/>
+        </>
+    )
 
 }
 
