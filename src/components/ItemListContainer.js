@@ -1,11 +1,11 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({name}) => {
     
   return (
         <>
-        <p id='greeting'>Esta es una página de venta de productos de Skin Care</p>
+        <p id='greeting'>Hola {name}, bienvenida/o a Pure!</p>
         <ItemCount stock={10} initial={1}/>
         </>
   )

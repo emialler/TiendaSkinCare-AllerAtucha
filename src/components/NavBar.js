@@ -1,12 +1,12 @@
 import CartWidget from "./CartWidget"
-
+import image from "../assets/pure.jpg"
 const NavBar = () => {
     return (
         <>
         <header>
             <nav>
                 <div>
-                    <img src="pure.jpg"></img>
+                    <img src={image}></img>
                     <h1>PURE - SkinCare</h1>
                 </div>
                 <div>
