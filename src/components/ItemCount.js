@@ -7,13 +7,15 @@ const ItemCount = ({stock, initial}) => {
     const [estado, setEstado] = useState(initial)
 
     const onAdd = () => {
-        if (estado < stock)
-        setEstado(estado + 1)
+        if (estado < stock){
+            setEstado(estado + 1)
+        } 
     }
 
     const onRemove = () => {
-        if (estado > initial)
-        setEstado(estado - 1)
+        if (estado > initial){
+            setEstado(estado - 1)
+        }
     }
 
   return (
