@@ -1,8 +1,8 @@
 import CartWidget from "./CartWidget"
 import image from "../assets/pure.jpg"
+
 const NavBar = () => {
     return (
-        <>
         <header>
             <nav>
                 <div>
@@ -13,12 +13,12 @@ const NavBar = () => {
                     <ul>
                         <li><a href="">Productos</a></li>
                         <li><a href="">Tips de SkinCare</a></li>
+                        <li><a href="">Contacto</a></li>
                         <li><a href=""><CartWidget/></a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        </>
     )
 }
 
