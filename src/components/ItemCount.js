@@ -16,9 +16,9 @@ const ItemCount = ({stock, initial}) => {
 
   return (
         <div id="itemCount">
-            <Button onClick={onAdd}>+</Button>
-            <p>{estado}</p>
             <Button onClick={onRemove}>-</Button>
+            <p>{estado}</p>
+            <Button onClick={onAdd}>+</Button>
         </div>             
   )
 }

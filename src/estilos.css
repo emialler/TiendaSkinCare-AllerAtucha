@@ -69,3 +69,45 @@ img {
     padding: 0 20px;
     margin-bottom: 0;
 }
+
+.detalle {
+    margin: 40px auto;
+    display: flex;
+    
+}
+
+.imgCard {
+    width: 60%;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#imgDetalle {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: auto;
+}
+
+.descriptionCard {
+    width: 40%;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#description {
+    font-size: 18px;
+}
+
+.title{
+    font-size: 28px;
+}
+
+.myCard {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#botonDetail {
+    width: 40%;
+    margin: 0 auto;
+}
