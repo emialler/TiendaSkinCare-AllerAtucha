@@ -1,10 +1,10 @@
-import React from 'react'
 import { Card, Container, Button } from 'react-bootstrap'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({item}) => {
+
   return (
-      <Container className="detalle">
+    <Container className="detalle">
         <Card className="imgCard">
           <Card.Img id="imgDetalle" src={item.pictureUrl}></Card.Img>
         </Card>

@@ -15,6 +15,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 nav div {
@@ -53,11 +54,6 @@ img {
     font-size: 2rem;
 }
 
-#greeting {
-    text-align: center;
-    padding-top: 30px;
-}
-
 #itemCount {
     display: flex;
     justify-content: center;
@@ -72,19 +68,19 @@ img {
 
 .detalle {
     margin: 40px auto;
-    display: flex;
-    
+    display: flex;   
 }
 
 .imgCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60%;
     object-fit: cover;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 #imgDetalle {
-    display: block;
-    margin: auto;
     width: 80%;
     height: auto;
 }
@@ -110,4 +106,37 @@ img {
 #botonDetail {
     width: 40%;
     margin: 0 auto;
+}
+
+footer {
+    background-color: white;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer h6{
+    text-align: center;
+    color: rgb(90, 138, 122);
+}
+
+#containerSpinner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinner {
+   margin: 200px 0;
+}
+
+.titulosProvisorios{
+    text-align: center;
+    margin-top: 150px;
+    height: 250px;
+}
+
+#listaProductos {
+    margin-bottom: 50px;
 }

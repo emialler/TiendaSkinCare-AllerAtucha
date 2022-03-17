@@ -1,18 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
 import products from '../data/products.json'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, Spinner } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
 
 
 const ItemListContainer = () => {
 
   const [items, setItems] = useState([])
   const [loading, setLoading] = useState(true)
+  const {idCategory} = useParams()
 
   useEffect(() => {
     const getData = new Promise((res, rej) => {
       setTimeout(()=>{
-        res(products)
+        if (idCategory == undefined) {
+          return res(products)
+        }else if(idCategory !=null){ 
+          const filtered = products.filter(function(items){ 
+          return items.category == idCategory; 
+        });
+        return res(filtered)
+        }
       }, 2000)
     })
 
@@ -27,13 +36,17 @@ const ItemListContainer = () => {
       setLoading(false)
     })
 
-  },[])
+  },[idCategory])
 
   if (loading){
-    return <h1 style={{textAlign:'center', fontSize:'2.5rem', paddingTop:'10rem'}}>Cargando...</h1>
-  }else{
     return (
-      <Container>
+      <Container id="containerSpinner">
+        <Spinner animation="border" variant="light" id="spinner"/>
+      </Container>
+    )
+}else{
+    return (
+      <Container id="listaProductos">
           <Row xs={2} md={4} className="g-4 mt-1 prueba">
                 <ItemList items={items} />
           </Row>

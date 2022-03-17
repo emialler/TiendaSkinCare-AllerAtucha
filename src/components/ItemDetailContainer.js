@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from 'react'
+import { Container, Spinner } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
 import products from '../data/products.json'
 import ItemDetail from './ItemDetail'
 
 
 const ItemDetailContainer = () => {
-  
     
-    const [item, setItem] = useState({})
+    const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
-  
+    const {idItem} = useParams()
+    
     useEffect(() => {
-      const prod = products[0]
       const getData = new Promise((res, rej) => {
         setTimeout(()=>{
-          res(prod)
+          res(products)
         }, 2000)
       })
   
       getData
       .then((resultado) =>{
-        setItem(resultado)
+        setItems(resultado)
       })
       .catch((error) => {
         console.log("Error")
@@ -31,14 +32,17 @@ const ItemDetailContainer = () => {
     },[])
   
     if (loading){
-      return <h1 style={{textAlign:'center', fontSize:'2.5rem', paddingTop:'10rem'}}>Cargando...</h1>
-    }else{
       return (
-        <>
-        <ItemDetail item={item} />
-        </>
+          <Container id="containerSpinner">
+            <Spinner animation="border" variant="light" id="spinner"/>
+          </Container>
+    )
+    }else{
+      const item = items.find(item => item.id == idItem)
+      return (
+        <ItemDetail item={item}/>
       )
-    }
+    } 
 }
 
 export default ItemDetailContainer

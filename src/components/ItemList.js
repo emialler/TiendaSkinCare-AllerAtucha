@@ -7,8 +7,8 @@ const ItemList = ({items}) => {
   return (
     <>
     {items.map((item)=>(
-      <Col>
-        <Item key={item.id} item={item}/>
+      <Col key={item.id}>
+        <Item item={item}/>
       </Col>
     ))}
     </>

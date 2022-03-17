@@ -1,5 +1,6 @@
 [{
         "id": 1,
+        "category": "hidratacion",
         "title": "Crema Facial de Día",
         "price": 895,
         "pictureUrl": "https://getthelookar.vteximg.com.br/arquivos/ids/164283-600-600/26281_crema-facial-hidratante-x-50-gr_imagen-1.jpg?v=637619503440900000",
@@ -7,6 +8,7 @@
     },
     {
         "id": 2,
+        "category": "hidratacion",
         "title": "Crema Facial de Noche",
         "price": 1880,
         "pictureUrl": "https://farmacityar.vteximg.com.br/arquivos/ids/183264-600-600/26275_crema-facial-de-noche-nutritiva-x-70-gr_imagen-1.jpg?v=636832558131200000",
@@ -14,6 +16,7 @@
     },
     {
         "id": 3,
+        "category": "limpieza",
         "title": "Agua Miceral x 200ml",
         "price": 940,
         "pictureUrl": "https://www.dermaglos.com/Portals/0/Images/Products/AguaMicelar_200ml.png",
@@ -21,9 +24,42 @@
     },
     {
         "id": 4,
+        "category": "tonificacion",
         "title": "Tónico Hidratante Descongestivo",
         "price": 940,
         "pictureUrl": "https://www.dermaglos.com/Portals/0/Images/Products/TonicoDescongestivo_200ml_new.png",
         "description": "Restaura y equilibra la hidratación de la piel completando el proceso de limpieza facial, dejándola purificada y fresca. Además tiene un efecto descongestivo, emoliente y suavizante. No contiene alcohol. Indicado para todo tipo de piel. Hipoalergénico / Apto piel sensible / Testeado dermatológica y oftalmológicamente / Sin TACC"
+    },
+    {
+        "id": 5,
+        "category": "limpieza",
+        "title": "Desmaquillante Bifaz de Ojos",
+        "price": 1003,
+        "pictureUrl": "https://www.dermaglos.com/Portals/0/DesmaquillanteBifaz_100ml.png",
+        "description": "Su fórmula bifaz elimina fácilmente el maquillaje a prueba de agua y de larga duración. Sin residuo graso. Para labios y ojos. Indicado para todo tipo de piel. Hipoalergénico / Apto piel sensible / Testeado dermatológica y oftalmológicamente / No comedogénico / Sin TACC"
+    },
+    {
+        "id": 6,
+        "category": "limpieza",
+        "title": "Gel de Limpieza Purificante",
+        "price": 1049,
+        "pictureUrl": "https://www.dermaglos.com/Portals/0/Images/Products/GelDeLimpiezaNormales.png",
+        "description": "Limpia en profundidad y elimina las impurezas diarias. Hidrata por 24h, calma y suaviza la piel. Ideal para aplicar bajo la ducha. Indicado para piel normal. Hipoalergénico / Apto piel sensible / Testeado dermatológica y oftalmológicamente / No comedogénico / Sin TACC"
+    },
+    {
+        "id": 7,
+        "category": "hidratacion",
+        "title": "Emulsión Hidratante de Día",
+        "price": 1851,
+        "pictureUrl": "https://www.dermaglos.com/Portals/0/Images/Products/EmulsionHidratanteDia_FPS20.png",
+        "description": "Hidrata por 72 h. y protege la piel manteniéndola suave, luminosa y saludable. Previene manchas. Textura liviana. Indicada para piel normal a mixta. Hipoalergénica / Apto piel sensible / Testeada dermatológica y oftalmológicamente / No comedogénica / Sin TACC"
+    },
+    {
+        "id": 8,
+        "category": "limpieza",
+        "title": "Leche de Limpieza Activa",
+        "price": 1048,
+        "pictureUrl": "https://www.dermaglos.com/Portals/0/Images/Products/LecheActiva_200ml_new.png",
+        "description": "Elimina en profundidad el maquillaje y las impurezas diarias permitiendo a la piel respirar libremente. Hidrata y suaviza, sin dejar sensación de grasitud. Indicada para todo tipo de piel. Hipoalergénica / Apto piel sensible / Testeada dermatológica y oftalmológicamente / Sin TACC"
     }
 ]
