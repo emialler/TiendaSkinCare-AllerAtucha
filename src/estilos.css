@@ -105,7 +105,7 @@ img {
 
 #botonDetail {
     width: 40%;
-    margin: 0 auto;
+    margin: auto;
 }
 
 footer {
@@ -139,4 +139,34 @@ footer h6{
 
 #listaProductos {
     margin-bottom: 50px;
+}
+
+.btnCompra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myButton {
+    margin: 10px 0;
+    background-color: rgb(90, 138, 122);
+    border-color: rgb(90, 138, 122);
+}
+
+.myButton:hover{
+    background-color: white;
+    border-color: rgb(90, 138, 122);
+    color: rgb(90, 138, 122);
+}
+
+#formulario {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+#formulario button {
+    margin: 20px 0 10px 0;
 }

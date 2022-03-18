@@ -9,7 +9,6 @@ const Item = ({item}) => {
           <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <Link to={`/item/${item.id}`}><Button variant="outline-secondary">Ver detalles</Button></Link>
-              <Button variant="outline-primary">Agregar al carrito</Button>
           </Card.Body>  
       </Card>
   )
