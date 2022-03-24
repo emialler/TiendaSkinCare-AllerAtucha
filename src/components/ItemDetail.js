@@ -1,15 +1,26 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Card, Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { contexto } from './CartContext'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({item}) => {
+
+  const { addItem, removeItem } = useContext(contexto)
   
-  const [carrito, setCarrito] = useState(0)
+  const [cantSeleccionada, setCantSeleccionada] = useState(0)
 
   const onAdd = (cantidad) => {
-    setCarrito(cantidad)
+    console.log(cantidad, "productos añadidos al carrito")
+    setCantSeleccionada(cantidad)
+    addItem(item, cantidad)
   } 
+
+  const toRemove = () => {
+    console.log(cantSeleccionada, "productos eliminados del carrito")
+    setCantSeleccionada(0)
+    removeItem(item)
+  }
 
     return (
       <Container className="detalle">
@@ -21,11 +32,11 @@ const ItemDetail = ({item}) => {
             <Card.Text id="description">{item.description}</Card.Text>
             <Card.Title className="title">${item.price}</Card.Title>
             {
-              carrito === 0 ? (<ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+              cantSeleccionada === 0 ? (<ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
               ) : (
                 <div className="btnCompra">
                   <Link to="/cart"><Button className="myButton">Ir al carrito</Button></Link>
-                  <Button onClick={()=>(setCarrito(0))} className="myButton">Reiniciar compra</Button>
+                  <Button onClick={toRemove} className="myButton">Reiniciar compra</Button>
                 </div>
               )}
           </Card>

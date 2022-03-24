@@ -2,15 +2,18 @@ import NavBar from './components/NavBar.js'
 import Main from './components/Main'
 import Footer from './components/Footer.js'
 import { BrowserRouter } from 'react-router-dom'
+import CartContext from './components/CartContext.js'
 
 const App = () => {
 
     return (
-        <BrowserRouter>
-            <NavBar/>
-            <Main/>
-            <Footer/>
-        </BrowserRouter>
+        <CartContext>
+            <BrowserRouter>
+                <NavBar/>
+                <Main/>
+                <Footer/>
+            </BrowserRouter>
+        </CartContext>
     )
 }
 
