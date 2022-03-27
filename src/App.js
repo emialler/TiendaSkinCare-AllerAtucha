@@ -2,7 +2,8 @@ import NavBar from './components/NavBar.js'
 import Main from './components/Main'
 import Footer from './components/Footer.js'
 import { BrowserRouter } from 'react-router-dom'
-import CartContext from './components/CartContext.js'
+import CartContext from './context/CartContext.js'
+
 
 const App = () => {
 

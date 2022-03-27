@@ -8,7 +8,6 @@ const CartContext = ({children}) => {
 
     const [carrito, setCarrito] = useState([])
     const [cantidad, setCantidad] = useState(0)
-    const [total, setTotal] = useState(0)
 
     const addItem = (producto, cantidad) =>{
 
@@ -40,14 +39,31 @@ const CartContext = ({children}) => {
         return carrito.some(item => item.id === id)
     }
 
+    const calcTotal = () =>{
+        let totalCarrito = 0
+        carrito.forEach((item) => {
+            totalCarrito += item.price * item.cantidad
+        })
+        return totalCarrito
+    }
+
+    const calcCantidad = () =>{
+        let cantidad = 0
+        carrito.forEach((item) => {
+            cantidad += item.cantidad
+        })
+        return cantidad
+    }
+
     const valorContexto = {
         carrito,
         cantidad,
-        total,
         addItem,
         removeItem,
         clear,
-        isInCart
+        isInCart,
+        calcTotal,
+        calcCantidad
     }
 
   return (

@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react'
 import { Card, Container, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import { contexto } from './CartContext'
+import { contexto } from '../context/CartContext'
 import ItemCount from './ItemCount'
 
 const ItemDetail = ({item}) => {
