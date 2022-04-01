@@ -1,48 +1,34 @@
-import React, { useEffect, useState } from 'react'
+import { getDoc, doc, query, where } from 'firebase/firestore'
+import React, { useContext, useEffect, useState } from 'react'
 import { Container, Spinner } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
-import products from '../data/products.json'
+import { productosCollection } from '../firebase'
 import ItemDetail from './ItemDetail'
+import { contexto } from '../context/CartContext'
 
 
 const ItemDetailContainer = () => {
     
-    const [items, setItems] = useState([])
-    const [loading, setLoading] = useState(true)
-    const {idItem} = useParams()
+    const { pedirProductos, items, loading } = useContext(contexto)
+    const { idItem } = useParams()
     
     useEffect(() => {
-      const getData = new Promise((res, rej) => {
-        setTimeout(()=>{
-          res(products)
-        }, 2000)
-      })
-  
-      getData
-      .then((resultado) =>{
-        setItems(resultado)
-      })
-      .catch((error) => {
-        console.log("Error")
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-  
+
+      pedirProductos(query(productosCollection, where("id", "==", Number(idItem))))
+
     },[])
   
-    if (loading){
-      return (
-          <Container id="containerSpinner">
-            <Spinner animation="border" variant="light" id="spinner"/>
-          </Container>
+    return (
+      <>
+        {
+          loading  ?  (<Container id="containerSpinner">
+                          <Spinner animation="border" variant="light" id="spinner"/>
+                      </Container>)
+                      :
+                      (<ItemDetail item={items.find(item => item.id == idItem)}/>)
+        }
+      </>
     )
-    }else{
-      const item = items.find(item => item.id == idItem)
-      return (
-        <ItemDetail item={item}/>
-      )
-    } 
 }
 
 export default ItemDetailContainer

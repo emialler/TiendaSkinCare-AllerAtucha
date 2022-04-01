@@ -1,3 +1,4 @@
+import { getDocs } from "firebase/firestore";
 import { createContext, useState } from "react";
 
 export const contexto = createContext()
@@ -8,6 +9,8 @@ const CartContext = ({children}) => {
 
     const [carrito, setCarrito] = useState([])
     const [cantidad, setCantidad] = useState(0)
+    const [items, setItems] = useState([])
+    const [loading, setLoading] = useState(true)
 
     const addItem = (producto, cantidad) =>{
 
@@ -55,15 +58,26 @@ const CartContext = ({children}) => {
         return cantidad
     }
 
+    const pedirProductos = (consulta) => {
+        const pedido = getDocs(consulta)
+        pedido
+            .then((res) => setItems(res.docs.map(doc => doc.data())))
+            .catch(() => console.log("Error"))
+            .finally(() => setLoading(false))
+    }
+
     const valorContexto = {
         carrito,
         cantidad,
+        items,
+        loading,
         addItem,
         removeItem,
         clear,
         isInCart,
         calcTotal,
-        calcCantidad
+        calcCantidad,
+        pedirProductos
     }
 
   return (
