@@ -11,13 +11,11 @@ const ItemDetail = ({item}) => {
   const [cantSeleccionada, setCantSeleccionada] = useState(0)
 
   const onAdd = (cantidad) => {
-    console.log(cantidad, "productos añadidos al carrito")
     setCantSeleccionada(cantidad)
     addItem(item, cantidad)
   } 
 
   const toRemove = () => {
-    console.log(cantSeleccionada, "productos eliminados del carrito")
     setCantSeleccionada(0)
     removeItem(item)
   }
@@ -25,7 +23,7 @@ const ItemDetail = ({item}) => {
     return (
       <Container className="detalle">
           <Card className="imgCard">
-            <Card.Img id="imgDetalle" src={item.pictureUrl}></Card.Img>
+            <Card.Img id="imgDetalle" src={item.image}></Card.Img>
           </Card>
           <Card className="descriptionCard">
             <Card.Title className="title">{item.title}</Card.Title>

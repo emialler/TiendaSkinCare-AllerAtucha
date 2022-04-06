@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom'
 import { contexto } from '../context/CartContext'
 
 
+
 const Cart = () => {
 
   /* ------ EN CONSTRUCCION ------ */
   
   const {carrito, calcTotal, removeItem, clear} = useContext(contexto)
 
+
   return (
       <>
         {carrito.map((item) => (
-          <Container className="cart">
-            <Card key={item.id} id="imgCart">
-              <Card.Img src={item.pictureUrl}></Card.Img>
+          <Container className="cart" key={item.id}>
+            <Card id="imgCart">
+              <Card.Img src={item.image}></Card.Img>
             </Card>
             <Card className="detalleCart">
               <div>
@@ -38,7 +40,7 @@ const Cart = () => {
                           : 
                           (<Card className="total">
                             <h3>Total: ${calcTotal()}</h3>
-                            <Button className="myButton">Terminar Compra</Button>
+                            <Link to="/checkout"><Button className="myButton">Terminar Compra</Button></Link>
                             <Button className="myButton" onClick={() => clear()}>Vaciar Carrito</Button>
                           </Card>)
         }     

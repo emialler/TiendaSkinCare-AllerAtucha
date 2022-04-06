@@ -24,14 +24,12 @@ const CartContext = ({children}) => {
         }else{
             copiaCarrito.push(itemAlCarrito)
             setCarrito(copiaCarrito)
-            console.log(copiaCarrito)
         }
   }
 
     const removeItem = (producto) =>{
         let nuevoCarrito = carrito.filter( item => item.id !== producto.id)
         setCarrito(nuevoCarrito)
-        console.log(nuevoCarrito)
     }
 
     const clear = () =>{
