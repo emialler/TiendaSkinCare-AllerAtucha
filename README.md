@@ -8,7 +8,9 @@
 ### Descripción
 
 Desarrollo de una tienda de venta de productos de Skincare con React JS utilizando Create React App y una base de datos en Firebase.
+
 ![logoPure](public/pure.jpg)
+
 ![pureGif](public/pureGif.gif)
 
 -------------------------
