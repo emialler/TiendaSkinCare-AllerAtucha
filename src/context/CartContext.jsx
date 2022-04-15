@@ -1,5 +1,6 @@
 import { getDocs } from "firebase/firestore";
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const contexto = createContext()
 
@@ -8,7 +9,7 @@ const {Provider} = contexto
 const CartContext = ({children}) => {
 
     const [carrito, setCarrito] = useState([])
-    const [cantidad, setCantidad] = useState(0)
+    const [cantidad] = useState(0)
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -21,9 +22,11 @@ const CartContext = ({children}) => {
             let index = copiaCarrito.findIndex( item => item.id === producto.id)
             copiaCarrito[index].cantidad += cantidad
             setCarrito(copiaCarrito)
+            toast.success(`Producto agregado al carrito`)
         }else{
             copiaCarrito.push(itemAlCarrito)
             setCarrito(copiaCarrito)
+            toast.success(`Producto agregado al carrito`)
         }
   }
 
@@ -60,7 +63,7 @@ const CartContext = ({children}) => {
         const pedido = getDocs(consulta)
         pedido
             .then((res) => setItems(res.docs.map(doc => doc.data())))
-            .catch(() => console.log("Error"))
+            .catch(() => toast.error("Error al cargar los productos"))
             .finally(() => setLoading(false))
     }
 

@@ -1,5 +1,5 @@
-import { getDoc, doc, query, where } from 'firebase/firestore'
-import React, { useContext, useEffect, useState } from 'react'
+import { query, where } from 'firebase/firestore'
+import React, { useContext, useEffect } from 'react'
 import { Container, Spinner } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
 import { productosCollection } from '../firebase'
@@ -8,7 +8,7 @@ import { contexto } from '../context/CartContext'
 
 
 const ItemDetailContainer = () => {
-    
+  
     const { pedirProductos, items, loading } = useContext(contexto)
     const { idItem } = useParams()
     

@@ -4,13 +4,9 @@ import { Link } from 'react-router-dom'
 import { contexto } from '../context/CartContext'
 
 
-
 const Cart = () => {
-
-  /* ------ EN CONSTRUCCION ------ */
   
   const {carrito, calcTotal, removeItem, clear} = useContext(contexto)
-
 
   return (
       <>

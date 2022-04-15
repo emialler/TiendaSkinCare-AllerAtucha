@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import ItemList from './ItemList'
 import { Container, Row, Spinner } from 'react-bootstrap'
 import { useParams } from 'react-router-dom'
@@ -17,7 +17,7 @@ const ItemListContainer = () => {
   
   useEffect(() => {
 
-    !idCategory ? pedirProductos(productosCollection) 
+    !idCategory ? pedirProductos(productosCollection)
                         : 
                   pedirProductos(query(productosCollection, where("category", "==", idCategory)))
                   
@@ -32,7 +32,7 @@ const ItemListContainer = () => {
                       </Container>)
                       :
                       (<Container id="listaProductos">
-                          <Row xs={2} md={4} className="g-4 mt-1 prueba">
+                          <Row xs={1} md={4} className="g-4 mt-1 mr-auto">
                                 <ItemList items={items} />
                           </Row>
                       </Container>)

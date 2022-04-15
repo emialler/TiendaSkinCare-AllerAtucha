@@ -14,7 +14,6 @@ const CartWidget = () => {
                         :
                         (<NavLink to="cart"><span className="material-icons">shopping_cart</span>{calcCantidad()}</NavLink>)
       }
-    
     </>
   )
 }
