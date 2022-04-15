@@ -1,9 +1,8 @@
 # Proyecto de desarrollo Frontend con React Js
-<img src="https://www.theblocklearning.com/wp-content/uploads/2018/09/1_qUlxDdY3T-rDtJ4LhLGkEg.png
-" width="50" height="auto"/><img src="https://bookface-images.s3.amazonaws.com/logos/e6b073de207210d17ba46f14e98095613c20b4fd.png" width="100" height="auto"/> [![Netlify Status](https://api.netlify.com/api/v1/badges/e57a2d03-5529-4630-8def-934b276c084b/deploy-status)](https://app.netlify.com/sites/pureskincare/deploys)
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/539px-React-icon.svg.png" width="50" height="auto"/> <img src="https://bookface-images.s3.amazonaws.com/logos/e6b073de207210d17ba46f14e98095613c20b4fd.png" width="100" height="auto"/> [![Netlify Status](https://api.netlify.com/api/v1/badges/e57a2d03-5529-4630-8def-934b276c084b/deploy-status)](https://app.netlify.com/sites/pureskincare/deploys)
 
 ## Acerca del Proyecto
+
 -------------------------
 
 ### Descripción
